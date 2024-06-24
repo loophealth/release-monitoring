@@ -1,0 +1,10 @@
+
+A release has the following states and actions
+1. Create a release from main and deploy to 'QA' environment
+2. The release goes through rigorous testing and if there are any bugs users can block the release and we need to capture this state
+3. Users are allowed to comment on the release to dictate any failing things or comments they have
+4. Developers fix the bugs and collect the commits as a hotfix to the release which updates the 'QA' environment with the new build again
+5. It also updates the state to be ready for testing
+6. In case there are no more bugs we need "approvals" from 2 users minimum to indicate that we can "promote" the build to the next stage.
+7. On a "promote" action we deploy the build to "beta" environment , the same process follows again until we reach "production"
+8. Once on production we still need 2 approvals to close the release as stable
